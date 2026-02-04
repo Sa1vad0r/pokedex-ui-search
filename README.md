@@ -1,10 +1,10 @@
 # Pokémon Search App
 
-A Python application that allows users to search for Pokémon and view detailed information using live data from the PokeAPI.
+A React application that allows users to search for Pokémon and view detailed information using live data from the PokeAPI.
 
 ## Overview
 
-The Pokémon Search App is a command-line Python project that retrieves real-time Pokémon data from the PokeAPI and displays detailed information to the user. The project is designed with clear separation between data access, domain logic, and user interface, and includes unit tests to ensure correctness and reliability.
+The Pokémon Search App is a command-line React project that retrieves real-time Pokémon data from the PokeAPI and displays detailed information to the user. The project is designed with clear separation between data access, domain logic, and user interface, and includes unit tests to ensure correctness and reliability.
 
 This project demonstrates working with REST APIs, object-oriented design, and test-driven development in React.
 
