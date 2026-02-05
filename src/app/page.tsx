@@ -52,31 +52,38 @@ function App() {
       {error && <p>{error}</p>}
 
       {pokemon && (
-        <div className="flex flex-col p-4 h-screen bg-gray-100 shadow-md mt-4">
-          <h2 className="font-bold text-4xl mb-5">
-            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-          </h2>
+        <div className="flex flex-row space-x-7 p-4 h-screen bg-gray-100 shadow-md mt-4">
+          <img
+            src={pokemon.sprites.other["official-artwork"].front_default}
+            alt={pokemon.name}
+            className="w-64 bg-gray-200 h-64 object-contain"
+          />
+          <div className="flex flex-col">
+            <h2 className="font-bold text-4xl mb-5">
+              {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+            </h2>
 
-          <p className="ml-7">
-            <strong>Types:</strong>{" "}
-            {pokemon.types.map((t) => t.type.name).join(", ")}
-          </p>
-          <p className="ml-7">
-            <strong>Height:</strong> {pokemon.height} decimetres
-          </p>
-          <p className="ml-7">
-            <strong>Weight:</strong> {pokemon.weight} hectograms
-          </p>
-          <p className="ml-7">
-            <strong>Stats:</strong>{" "}
-            {pokemon.stats
-              .map((s) => `${s.stat.name}: ${s.base_stat}`)
-              .join(", ")}
-          </p>
-          <p className="ml-7">
-            <strong>Abilities:</strong>{" "}
-            {pokemon.abilities.map((a) => a.ability.name).join(", ")}
-          </p>
+            <p className="ml-7">
+              <strong>Types:</strong>{" "}
+              {pokemon.types.map((t) => t.type.name).join(", ")}
+            </p>
+            <p className="ml-7">
+              <strong>Height:</strong> {pokemon.height} decimetres
+            </p>
+            <p className="ml-7">
+              <strong>Weight:</strong> {pokemon.weight} hectograms
+            </p>
+            <p className="ml-7 ">
+              <strong>Stats:</strong>{" "}
+              {pokemon.stats
+                .map((s) => `${s.stat.name}: ${s.base_stat}`)
+                .join(", ")}
+            </p>
+            <p className="ml-7">
+              <strong>Abilities:</strong>{" "}
+              {pokemon.abilities.map((a) => a.ability.name).join(", ")}
+            </p>
+          </div>
         </div>
       )}
     </div>
